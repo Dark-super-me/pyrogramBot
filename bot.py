@@ -8,18 +8,18 @@ logging.basicConfig(level=logging.DEBUG,
 LOGGER = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-Animes = Cient(
+bot = Cient(
   'simp',
   api_id = Config.API_ID,
   api_hash = Config.API_HASH,
   bot_token = Config.BOT_TOKEN
 )
 
-@Animes.on_message(filters.command("start"))
-def start(Animes, msg):
+@bot.on_message(filters.command("start"))
+def start(bot, message):
   Animes.send_message("Hi there")
   
-@Animes.on_message(filters.command("id"))
-def get_id(Animes, mag):
-  msg.reply(f"Your id is {msg.from_user.id} \nJoin @Animes_Encoded")
+@bot.on_message(filters.command("id"))
+def get_id(bot, message):
+  message.reply(f"Your id is {message.from_user.id} \nJoin @Animes_Encoded")
   
