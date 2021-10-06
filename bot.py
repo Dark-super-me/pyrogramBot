@@ -8,11 +8,11 @@ logging.basicConfig(level=logging.DEBUG,
 LOGGER = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-Animes =Cient(
+Animes = Cient(
   'simp',
-  api_id=Config.API_ID,
-  api_hash=Config.API_HASH,
-  bot_token=Config.BOT_TOKEN
+  api_id = Config.API_ID,
+  api_hash = Config.API_HASH,
+  bot_token = Config.BOT_TOKEN
 )
 
 @Animes.on_message(filters.command("start"))
